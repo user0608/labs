@@ -1,0 +1,17 @@
+$TTL 60    ; TTL de 60 segundos (1 minuto)
+@    IN  SOA  ns1.kevin.net. admin.kevin.net. (
+           2023101601 ; Serial
+           86400      ; Refresh
+           7200       ; Retry
+           3600000    ; Expire
+           60 )       ; Minimum TTL de 60 segundos
+
+; Servidores de nombres del dominio
+kevin.net.    IN  NS  ns1.kevin.net.
+
+; Registros A
+ns1.kevin.net.  IN 	A 	192.16.0.21
+
+@		IN	A	192.16.0.100
+home		IN	A	192.16.0.50
+nginx		IN	CNAME	kevin.net.

@@ -1,0 +1,14 @@
+$TTL 60    ; TTL de 60 segundos (1 minuto)
+@    IN  SOA  ns1.kevin.local. admin.kevin.local. (
+           2023101601 ; Serial
+           86400      ; Refresh
+           7200       ; Retry
+           3600000    ; Expire
+           60 )       ; Minimum TTL de 60 segundos
+
+; Servidores de nombres del dominio
+kevin.local.    IN  NS  ns1.kevin.local.
+
+; Registros A
+ns1  IN  A  192.16.0.21
+home IN A  192.16.0.50
